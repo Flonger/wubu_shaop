@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:shop/func_view.dart';
 import 'package:shop/hot_commodity.dart';
@@ -35,6 +36,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const methodChannel = const MethodChannel('flutter/pushToLogin');
+
+  _pushToLogin() async {
+    await methodChannel.invokeMethod('pushToLogin', '参数');
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -68,20 +75,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       Padding(
                         padding: EdgeInsets.only(right: 15),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            _pushToLogin();
+                          },
                           child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.yellow,
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: Text(
-                              '立即申请',
-                              style: TextStyle(
-                                  color: Color(0xff2b2b2b),
-                                  fontSize: 14,
-                                  decoration: TextDecoration.none),
-                            ),
-                          ),
+                              width: 80,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '立即申请',
+                                  style: TextStyle(
+                                      color: Color(0xff2b2b2b),
+                                      fontSize: 14,
+                                      decoration: TextDecoration.none),
+                                ),
+                              )),
                         ),
                       ),
                     ],
