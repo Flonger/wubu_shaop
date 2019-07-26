@@ -46,12 +46,23 @@ flutter:
   # like this:
   assets:
     - images/bannar.png
+    - images/bannar0.png
     - images/diannao.png
+    - images/diannao0.png
+    - images/diannao1.png
     - images/dianshi.png
+    - images/dianshi0.png
+    - images/dianshi1.png
     - images/hot.png
+    - images/hot0.png
+    - images/hot1.png
     - images/shop.png
     - images/shoubiao.png
+    - images/shoubiao0.png
+    - images/shoubiao1.png
     - images/shouji.png
+    - images/shouji0.png
+    - images/shouji1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

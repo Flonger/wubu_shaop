@@ -66,7 +66,7 @@ class _HotCommodity extends State<HotCommodity> {
                     Container(
                       height: 125,
                       width: 125,
-                      child: Image(image: AssetImage('images/shop.png')),
+                      child: Image(image: AssetImage('images/hot0.png')),
                     ),
                     Positioned(
                       bottom: 0,
@@ -98,6 +98,7 @@ class _HotCommodity extends State<HotCommodity> {
             ),
           ),
           Container(
+            padding: EdgeInsets.only(left: 15),
             child: Column(
               children: <Widget>[
                 Stack(
@@ -105,7 +106,7 @@ class _HotCommodity extends State<HotCommodity> {
                     Container(
                       height: 125,
                       width: 125,
-                      child: Image(image: AssetImage('images/shop.png')),
+                      child: Image(image: AssetImage('images/hot1.png')),
                     ),
                     Positioned(
                       bottom: 0,
@@ -137,6 +138,7 @@ class _HotCommodity extends State<HotCommodity> {
             ),
           ),
           Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
             child: Column(
               children: <Widget>[
                 Stack(

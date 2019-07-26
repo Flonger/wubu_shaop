@@ -2,8 +2,25 @@ import 'package:flutter/material.dart';
 
 class FuncView extends StatefulWidget {
   final String funcTitle;
+  final String imageName0;
+  final String imageName1;
+  final String title0;
+  final String title1;
+  final String desc0;
+  final String desc1;
+  final double width;
+  final double height;
 
-  FuncView({this.funcTitle});
+  FuncView(
+      {this.funcTitle,
+      this.width,
+      this.height,
+      this.imageName0,
+      this.imageName1,
+      this.title0,
+      this.title1,
+      this.desc0,
+      this.desc1});
 
   @override
   _FuncViewState createState() => _FuncViewState();
@@ -53,16 +70,16 @@ class _FuncViewState extends State<FuncView> {
                     children: <Widget>[
                       Container(
                         padding: EdgeInsets.only(top: 20),
-                        height: 80,
-                        width: 80,
+                        height: widget.width,
+                        width: widget.height,
                         child: Image(
-                          image: AssetImage('images/shop.png'),
+                          image: AssetImage(widget.imageName0),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 20),
                         child: Text(
-                          '小米 Redmi K20Pro ',
+                          widget.title0,
                           style: TextStyle(
                               color: Color(0xff101010),
                               fontSize: 13,
@@ -72,7 +89,7 @@ class _FuncViewState extends State<FuncView> {
                       Padding(
                         padding: EdgeInsets.only(top: 15),
                         child: Text(
-                          '￥2499.00 ',
+                          widget.desc0,
                           style: TextStyle(
                               color: Colors.red,
                               fontSize: 14,
@@ -90,16 +107,16 @@ class _FuncViewState extends State<FuncView> {
                     children: <Widget>[
                       Container(
                         padding: EdgeInsets.only(top: 20),
-                        height: 80,
-                        width: 80,
+                        height: widget.width,
+                        width: widget.height,
                         child: Image(
-                          image: AssetImage('images/shop.png'),
+                          image: AssetImage(widget.imageName1),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 20),
                         child: Text(
-                          '小米 Redmi K20Pro ',
+                          widget.title1,
                           style: TextStyle(
                               color: Color(0xff101010),
                               fontSize: 13,
@@ -109,7 +126,7 @@ class _FuncViewState extends State<FuncView> {
                       Padding(
                         padding: EdgeInsets.only(top: 15),
                         child: Text(
-                          '￥2499.00 ',
+                          widget.desc1,
                           style: TextStyle(
                               color: Colors.red,
                               fontSize: 14,
