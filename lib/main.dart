@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
     'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559132684341&di=01d09eebed78867983ccf4d41008cf35&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw720h480%2F20180110%2F1076-fyqnick4307161.jpg',
   ];
 
-  List _bannars = ['images/bannar.png', 'images/bannar.png'];
+  List _bannars = ['images/bannar0.png', 'images/bannar.png'];
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
