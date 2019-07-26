@@ -38,10 +38,59 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      color: Color(0xfff6f6f6),
-      child: _listView,
-    );
+    return MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        child: Container(
+          color: Color(0xfff6f6f6),
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: <Widget>[
+              _listView,
+              Positioned(
+//                bottom: 40,
+                child: Container(
+                  height: 40,
+                  decoration: BoxDecoration(color: Color(0xff000000)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Text(
+                          '最高现金额度20000元',
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              decoration: TextDecoration.none),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 15),
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Text(
+                              '立即申请',
+                              style: TextStyle(
+                                  color: Color(0xff2b2b2b),
+                                  fontSize: 14,
+                                  decoration: TextDecoration.none),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ));
   }
 
   Widget get _bannar {
